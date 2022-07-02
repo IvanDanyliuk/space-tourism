@@ -22,6 +22,7 @@ const Header = styled.header`
 const Logo = styled(Box)``;
 
 const NavMenu = styled.nav`
+  width: 55vw;
   padding: 30px 110px 30px 120px;
   background: rgba(11, 13, 23, 0.1);
   backdrop-filter: blur(10px);
@@ -31,7 +32,6 @@ const NavList = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
-  
 `;
 
 const NavItem = styled.li`

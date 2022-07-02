@@ -12,7 +12,7 @@ interface ILayout {
 const Main = styled.main`
   position: relative;
   height: 100vh;
-  font-family: 'Bellefair', serif;
+  /* font-family: 'Bellefair', serif; */
 `;
 
 
