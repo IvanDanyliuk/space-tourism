@@ -1,3 +1,4 @@
+import { red } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -62,10 +63,33 @@ const theme = createTheme({
       main: '#ffffff',
     },
     secondary: {
-      main: '#0b0d17',
+      main: '#d0d6f9',
     },
     info: {
-      main: '#d0d6f9',
+      main: '#0b0d17',
+    },
+  },
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        textColorPrimary: {
+          color: '#d0d6f9'
+        },
+        selected: {
+          color: '#ffffff'
+        },
+        root: {
+          width: 0,
+        }
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          padding: 0,
+          margin: 0,
+        }
+      }
     }
   }
 });
