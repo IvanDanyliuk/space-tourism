@@ -11,22 +11,22 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontFamily: 'Bellefair',
-      fontSize: '150px',
+      fontSize: '9em',
       textTransform: 'uppercase',
     },
     h2: {
       fontFamily: 'Bellefair',
-      fontSize: '100px',
+      fontSize: '6.25em',
       textTransform: 'uppercase',
     },
     h3: {
       fontFamily: 'Bellefair',
-      fontSize: '56px',
+      fontSize: '3.5em',
       textTransform: 'uppercase',
     },
     h4: {
       fontFamily: 'Bellefair',
-      fontSize: '150px',
+      fontSize: '2em',
       textTransform: 'uppercase',
     },
     h5: {
