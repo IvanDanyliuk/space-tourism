@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
+import { SyntheticEvent, useState } from 'react';
 import styled from 'styled-components';
 import { Box, Divider, Tab, Tabs, Typography } from '@mui/material';
-import { SyntheticEvent, useState } from 'react';
 import TabPanel from '../components/TabPanel';
 import Image from 'next/image';
 

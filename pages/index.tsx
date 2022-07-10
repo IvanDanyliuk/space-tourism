@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
+import { SyntheticEvent } from 'react';
 import { useRouter } from 'next/router';
 import { Box, Typography } from '@mui/material';
 import styled from 'styled-components';
-import { SyntheticEvent } from 'react';
 
 
 const Container = styled.div`

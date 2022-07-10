@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material';
 import type { NextPage } from 'next';
+import { Box, Typography } from '@mui/material';
 import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 
