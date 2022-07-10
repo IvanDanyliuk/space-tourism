@@ -10,11 +10,11 @@ const Slider = dynamic(import('../components/CrewSlider'), {
 
 
 const Container = styled.div`
-  padding-top: 110px;
+  padding-top: 15vh;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background: url('/assets/img/desktop/destination_bg.png');
+  background: url('/assets/img/desktop/crew_bg.png');
   background-size: cover;
   box-sizing: border-box;
 `;
@@ -27,7 +27,9 @@ const Content = styled(Box)`
 `;
 
 const Heading = styled(Typography)`
-  padding-top: 7vh;
+  height: 10vh;
+  display: flex;
+  align-items: flex-end;
 `;
 
 const HeadingNumber = styled.span`
@@ -41,6 +43,9 @@ const HeadingText = styled.span``;
 const SliderSection = styled(Box)`
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 `;
 
 

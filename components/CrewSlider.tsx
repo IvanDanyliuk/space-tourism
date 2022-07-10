@@ -15,6 +15,12 @@ interface ICrewSlider {
   }[],
 };
 
+const SliderContainer = styled(Slider)`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
 const Slide = styled.div`
   position: relative;
   width: 100%;
@@ -25,11 +31,10 @@ const Slide = styled.div`
 
 const CrewMemberInfo = styled(Box)`
   position: relative;
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
 `;
 
 const MemberName = styled(Typography)`
@@ -39,12 +44,14 @@ const MemberName = styled(Typography)`
 const CrewMemberPhoto = styled(Box)`
   position: relative;
   width: 50%;
-  height: 70vh;
+  min-height: 75vh;
 `;
 
 const DotList = styled.ul`
+  position: absolute !important;
+  bottom: 5vh !important;
   padding: 0;
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -73,6 +80,8 @@ const settings = {
   infinite: true,
   arrows: false,
   speed: 500,
+  autoplay: true,
+  autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
   appendDots: (dots: any) => {
@@ -91,7 +100,7 @@ const settings = {
 
 const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
   return (
-    <Slider {...settings}>
+    <SliderContainer {...settings}>
       {
         info.map(member => (
           <Slide key={uuid()}>
@@ -106,7 +115,7 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
           </Slide>
         ))
       }
-    </Slider>
+    </SliderContainer>
   );
 };
 

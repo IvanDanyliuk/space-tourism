@@ -6,7 +6,7 @@ import { SyntheticEvent } from 'react';
 
 
 const Container = styled.div`
-  padding-top: 110px;
+  padding-top: 15vh;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ const Content = styled(Box)`
 `;
 
 const TextContainer = styled(Box)`
-  width: 440px;
+  width: 40%;
 `;
 
 const UpperText = styled(Typography)`
@@ -36,7 +36,11 @@ const BottomText = styled(Typography)`
   margin-top: 24px;
 `;
 
-const ButtonContainer = styled(Box)``;
+const ButtonContainer = styled(Box)`
+  width: 45%;
+  display: flex;
+  justify-content: center;
+`;
 
 const ExploreBtn = styled.button`
   cursor: pointer;

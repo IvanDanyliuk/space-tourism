@@ -9,8 +9,9 @@ import logo from '../public/assets/img/desktop/logo.png'
 const Header = styled.header`
   padding-left: 60px;
   position: absolute;
-  top: 20px;
+  top: 3vh;
   width: 100%;
+  height: 12vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,8 +24,11 @@ const Logo = styled(Box)``;
 
 const NavMenu = styled.nav`
   width: 55vw;
-  padding: 30px 110px 30px 120px;
-  background: rgba(11, 13, 23, 0.1);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 110px 0 120px;
+  background: rgba(111, 113, 123, 0.1);
   backdrop-filter: blur(10px);
 `;
 
