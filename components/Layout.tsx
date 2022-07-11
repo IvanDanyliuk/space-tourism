@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
@@ -11,7 +10,6 @@ interface ILayout {
 
 const Main = styled.main`
   position: relative;
-  /* height: 100vh; */
 `;
 
 

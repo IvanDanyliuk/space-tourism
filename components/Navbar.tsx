@@ -18,6 +18,10 @@ const Header = styled.header`
   font-family: 'Barlow Condensed', sans-serif;
   box-sizing: border-box;
   z-index: 100;
+  
+  @media (max-width: 900px) {
+    height: 10vh;
+  }
 `;
 
 const Logo = styled(Box)``;
@@ -30,12 +34,23 @@ const NavMenu = styled.nav`
   padding: 0 110px 0 120px;
   background: rgba(111, 113, 123, 0.1);
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    padding: 0 20px;
+    width: 60vw;
+  }
 `;
 
 const NavList = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 const NavItem = styled.li`
@@ -44,6 +59,10 @@ const NavItem = styled.li`
   list-style: none;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
+
+  @media (max-width: 900px) {
+    margin-right: 25px;
+  }
 `;
 
 const LinkNum = styled.span`

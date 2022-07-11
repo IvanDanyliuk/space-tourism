@@ -14,10 +14,19 @@ const Container = styled.div`
   background: url('/assets/img/desktop/destination_bg.png');
   background-size: cover;
   box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    padding-top: 10vh;
+    background: url('/assets/img/tablet/destination_bg.png') cover;
+  }
 `;
 
 const Content = styled(Box)`
   width: 1100px;
+
+  @media (max-width: 900px) {
+    width: 85%;
+  }
 `;
 
 const Heading = styled(Typography)`
@@ -37,14 +46,11 @@ const TabContainer = styled(Box)`
   width: 100%;
 `;
 
-const TabButtonsWrapper = styled(Box)`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
+const TabButtons = styled(Tabs)`
+  @media (max-width: 900px) {
+    margin: 5vh 0 3vh 0;
+  }
 `;
-
-const TabButtons = styled(Tabs)``;
 
 const TabButton = styled(Tab)`
   font-size: 16px;
@@ -52,10 +58,19 @@ const TabButton = styled(Tab)`
 
 const TabText = styled(Box)`
   width: 45%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const TabDivider = styled(Divider)`
   margin: 50px 0;
+  width: 100%;
 `;
 
 const TabDetails = styled(Box)`
@@ -134,14 +149,6 @@ const Destination: NextPage = () => {
           <HeadingText>Pick your destination</HeadingText>
         </Heading>
         <TabContainer>
-          <TabButtonsWrapper>
-            <TabButtons value={value} onChange={handleTabChange} aria-label='destination-tabs'>
-              <TabButton label='Moon' { ...a11yProps(0) } />
-              <TabButton label='Mars' { ...a11yProps(1) } />
-              <TabButton label='Europa' { ...a11yProps(2) } />
-              <TabButton label='Titan' { ...a11yProps(3) } />
-            </TabButtons>
-          </TabButtonsWrapper>
           {
             tabs.map(tab => (
               <TabPanel 
@@ -150,6 +157,12 @@ const Destination: NextPage = () => {
               >
                 <Image src={tab.imgUrl} alt={tab.title} width={'445px'} height={'445px'} />
                 <TabText>
+                  <TabButtons value={value} onChange={handleTabChange} aria-label='destination-tabs'>
+                    <TabButton label='Moon' { ...a11yProps(0) } />
+                    <TabButton label='Mars' { ...a11yProps(1) } />
+                    <TabButton label='Europa' { ...a11yProps(2) } />
+                    <TabButton label='Titan' { ...a11yProps(3) } />
+                  </TabButtons>
                   <Typography variant='h2' color='primary'>{tab.title}</Typography>
                   <Typography variant='body1' color='secondary'>{tab.text}</Typography>
                   <TabDivider color='#7c7c7c' />

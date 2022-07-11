@@ -18,6 +18,11 @@ const Content = styled(Box)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 900px) {
+    padding: 5vh 0;
+    flex-direction: column;
+  }
 `;
 
 

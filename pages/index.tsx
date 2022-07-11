@@ -7,12 +7,18 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding-top: 15vh;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   background: url('/assets/img/desktop/homepage_bg.png');
   background-size: cover;
   box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    background: url('/assets/img/tablet/homepage_bg.png');
+    background-size: cover;
+  }
 `;
 
 const Content = styled(Box)`
@@ -20,17 +26,30 @@ const Content = styled(Box)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const TextContainer = styled(Box)`
-  width: 40%;
+  width: 70%;
+  
+  @media (max-width: 900px) {
+    text-align: center;
+    margin-bottom: 10vh;
+  }
 `;
 
 const UpperText = styled(Typography)`
   margin-bottom: 24px;
 `;
 
-const Heading = styled(Typography)``;
+const Heading = styled(Typography)`
+
+`;
 
 const BottomText = styled(Typography)`
   margin-top: 24px;
@@ -95,14 +114,14 @@ const Home: NextPage = () => {
           </BottomText>
         </TextContainer>
         <ButtonContainer>
-            <ExploreBtn onClick={handleExploreBtn}>
-              <ButtonTitle 
-                variant='subtitle1' 
-                color='info'
-              >
-                Explore
-              </ButtonTitle>
-            </ExploreBtn>
+          <ExploreBtn onClick={handleExploreBtn}>
+            <ButtonTitle 
+              variant='subtitle1' 
+              color='info'
+            >
+              Explore
+            </ButtonTitle>
+          </ExploreBtn>
         </ButtonContainer>
       </Content>
     </Container>
