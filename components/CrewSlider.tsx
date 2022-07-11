@@ -68,7 +68,7 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
       return <DotList>{dots}</DotList>
     },
     customPaging: (i: number) => {
-      const inactive = {
+      const active = {
         content: '',
         cursor: 'pointer',
         width: '15px',
@@ -78,7 +78,7 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
         background: '#ffffff',
       };
 
-      const active = {
+      const inactive = {
         content: '',
         cursor: 'pointer',
         width: '15px',
@@ -88,7 +88,7 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
         background: '#929292',
       };
       return (
-        <button style={i === activeSlideIndex ? inactive : active}></button>
+        <button style={i === activeSlideIndex ? active : inactive}></button>
       )
     },
     beforeChange: (prev: number, next: number) => {

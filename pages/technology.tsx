@@ -16,17 +16,16 @@ const Container = styled.div`
 
 const Content = styled(Box)`
   position: relative;
-  padding-left: 10vw;
+  padding: 5vh 0 5vh 10vw;
   width: 100%;
   display: flex;
   flex-direction: column;
 `;
 
 const Heading = styled(Typography)`
-  height: 10vh;
+  /* height: 10vh; */
   display: flex;
   align-items: flex-end;
-  border: 1px solid yellow;
 `;
 
 const HeadingNumber = styled.span`

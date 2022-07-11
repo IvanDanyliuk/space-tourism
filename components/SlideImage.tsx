@@ -16,7 +16,7 @@ const ImageContainer = styled(Box)`
 const Image = styled(NextImage)`
   position: relative;
   object-fit: contain !important;
-  object-position: bottom ;
+  object-position: bottom right;
 `;
 
 
