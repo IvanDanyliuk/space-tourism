@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Box, Typography } from '@mui/material';
 import Slider from 'react-slick';
 import { v4 as uuid } from 'uuid';
-import CrewImage from './CrewImage';
+import SlideImage from './SlideImage';
 
 
 interface ICrewSlider {
@@ -15,12 +15,6 @@ interface ICrewSlider {
   }[],
 };
 
-const SliderContainer = styled(Slider)`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-`;
-
 const Slide = styled.div`
   position: relative;
   width: 100%;
@@ -31,7 +25,7 @@ const Slide = styled.div`
 
 const CrewMemberInfo = styled(Box)`
   position: relative;
-  width: 50%;
+  width: 56%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +37,7 @@ const MemberName = styled(Typography)`
 
 const CrewMemberPhoto = styled(Box)`
   position: relative;
-  width: 50%;
+  width: 44%;
   min-height: 75vh;
 `;
 
@@ -54,53 +48,57 @@ const DotList = styled.ul`
   width: 20%;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   list-style: none;
 `;
 
-const DotListItem = styled.li`
-  
-`;
-
-const DotButton = styled.button`
-  content: '';
-  cursor: pointer;
-  width: 15px;
-  height: 15px;
-  border: none;
-  border-radius: 50%;
-  background: '#ffffff';
-`;
-
-
-const settings = {
-  dots: true,
-  infinite: true,
-  arrows: false,
-  speed: 500,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  appendDots: (dots: any) => {
-    return <DotList>{dots}</DotList>
-  },
-  customPaging: (i: number) => {
-    return (
-      <DotListItem>
-        <DotButton></DotButton>
-      </DotListItem>
-    )
-  },
-  dotsClass: 'crew-dots'
-};
-
 
 const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    appendDots: (dots: any) => {
+      return <DotList>{dots}</DotList>
+    },
+    customPaging: (i: number) => {
+      const inactive = {
+        content: '',
+        cursor: 'pointer',
+        width: '15px',
+        height: '15px',
+        border: 'none',
+        borderRadius: '50%',
+        background: '#ffffff',
+      };
+
+      const active = {
+        content: '',
+        cursor: 'pointer',
+        width: '15px',
+        height: '15px',
+        border: 'none',
+        borderRadius: '50%',
+        background: '#929292',
+      };
+      return (
+        <button style={i === activeSlideIndex ? inactive : active}></button>
+      )
+    },
+    beforeChange: (prev: number, next: number) => {
+      setActiveSlideIndex(next);
+    },
+    dotsClass: 'crew-dots'
+  };
+
   return (
-    <SliderContainer {...settings}>
+    <Slider {...settings}>
       {
         info.map(member => (
           <Slide key={uuid()}>
@@ -110,12 +108,12 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
               <Typography variant='body1' color='secondary'>{member.information}</Typography>
             </CrewMemberInfo>
             <CrewMemberPhoto>
-              <CrewImage url={member.photoUrl} altText={member.name} />
+              <SlideImage url={member.photoUrl} altText={member.name} />
             </CrewMemberPhoto>
           </Slide>
         ))
       }
-    </SliderContainer>
+    </Slider>
   );
 };
 

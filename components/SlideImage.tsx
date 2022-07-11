@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import NextImage from 'next/image';
 
 
-interface ICrewImage {
+interface ISlideImage {
   url: string;
   altText: string;
 };
@@ -20,7 +20,7 @@ const Image = styled(NextImage)`
 `;
 
 
-const CrewImage: React.FC<ICrewImage> = ({ url, altText, ...rest }) => {
+const SlideImage: React.FC<ISlideImage> = ({ url, altText, ...rest }) => {
   return (
     <ImageContainer>
       <Image src={url} alt={altText} layout='fill' { ...rest } />
@@ -28,4 +28,4 @@ const CrewImage: React.FC<ICrewImage> = ({ url, altText, ...rest }) => {
   );
 };
 
-export default CrewImage;
+export default SlideImage;
