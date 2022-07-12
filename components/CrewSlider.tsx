@@ -21,6 +21,13 @@ const Slide = styled.div`
   display: flex !important;
   justify-content: space-between;
   box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    padding-top: 20px;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const CrewMemberInfo = styled(Box)`
@@ -29,6 +36,10 @@ const CrewMemberInfo = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    width: 100% !important;
+  }
 `;
 
 const MemberName = styled(Typography)`
@@ -39,6 +50,13 @@ const CrewMemberPhoto = styled(Box)`
   position: relative;
   width: 44%;
   min-height: 75vh;
+
+  @media (max-width: 900px) {
+    margin-top: 7vh;
+    width: 70% !important;
+    min-height: 50vh;
+    display: flex !important;
+  }
 `;
 
 const DotList = styled.ul`
@@ -49,6 +67,12 @@ const DotList = styled.ul`
   display: flex;
   justify-content: space-between;
   list-style: none;
+
+  @media (max-width: 900px) {
+    /* position: relative !important; */
+    left: 40%;
+    bottom: 50vh !important;
+  }
 `;
 
 

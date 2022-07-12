@@ -17,6 +17,10 @@ const Container = styled.div`
   background: url('/assets/img/desktop/crew_bg.png');
   background-size: cover;
   box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    background: url('/assets/img/tablet/crew_bg.png') cover no-repeat;
+  }
 `;
 
 const Content = styled(Box)`
@@ -24,10 +28,14 @@ const Content = styled(Box)`
   width: 1100px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 900px) {
+    width: 87%;
+  }
 `;
 
 const Heading = styled(Typography)`
-  height: 10vh;
+  height: 4vh;
   display: flex;
   align-items: flex-end;
 `;
