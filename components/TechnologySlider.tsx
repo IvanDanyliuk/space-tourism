@@ -22,15 +22,27 @@ const Slide = styled.div`
   display: flex !important;
   justify-content: space-between;
   box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    min-height: 30vh;
+    flex-direction: column-reverse !important;
+  }
 `;
 
 const TextSection = styled(Box)`
-  padding-left: 160px;
+  padding: 0 0 0 160px;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   color: '#ffffff';
+  box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    padding: 18vh 5vw 0 5vw;
+    width: 100%;
+  }
 `;
 
 const SlideTitle = styled(Typography)`
@@ -40,8 +52,12 @@ const SlideTitle = styled(Typography)`
 const ImageSection = styled(Box)`
   position: relative;
   width: 40%;
-`;
 
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 31vh;
+  }
+`;
 
 const DotList = styled.ul`
   position: absolute !important;
@@ -53,6 +69,15 @@ const DotList = styled.ul`
   flex-direction: column;
   justify-content: space-between;
   list-style: none;
+
+  @media (max-width: 900px) {
+    top: 35vh;
+    left: 25%;
+    width: 50%;
+    height: 80px;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
 `;
 
 
