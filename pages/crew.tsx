@@ -30,7 +30,9 @@ const Content = styled(Box)`
   flex-direction: column;
 
   @media (max-width: 900px) {
+    padding: 0 3vw;
     width: 87%;
+    box-sizing: border-box;
   }
 `;
 
@@ -53,6 +55,7 @@ const SliderSection = styled(Box)`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   flex: 1;
 `;
 

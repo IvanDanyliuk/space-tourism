@@ -15,11 +15,14 @@ interface ICrewSlider {
   }[],
 };
 
+const CustomSlider = styled(Slider)``;
+
 const Slide = styled.div`
   position: relative;
   width: 100%;
   display: flex !important;
   justify-content: space-between;
+  flex: 1;
   box-sizing: border-box;
 
   @media (max-width: 900px) {
@@ -69,7 +72,6 @@ const DotList = styled.ul`
   list-style: none;
 
   @media (max-width: 900px) {
-    /* position: relative !important; */
     left: 40%;
     bottom: 50vh !important;
   }
@@ -122,7 +124,7 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
   };
 
   return (
-    <Slider {...settings}>
+    <CustomSlider {...settings}>
       {
         info.map(member => (
           <Slide key={uuid()}>
@@ -137,7 +139,7 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
           </Slide>
         ))
       }
-    </Slider>
+    </CustomSlider>
   );
 };
 
