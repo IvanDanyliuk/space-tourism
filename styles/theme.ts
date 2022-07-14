@@ -11,29 +11,56 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontFamily: 'Bellefair',
-      fontSize: '9em',
+      fontSize: '150px',
       textTransform: 'uppercase',
+      '@media (max-width: 420px)': {
+        fontSize: '80px',
+      },
     },
     h2: {
       fontFamily: 'Bellefair',
-      fontSize: '6.25em',
+      fontSize: '100px',
       textTransform: 'uppercase',
+      '@media (max-width: 900px)': {
+        fontSize: '80px',
+      },
+      '@media (max-width: 420px)': {
+        fontSize: '56px',
+      },
     },
     h3: {
       fontFamily: 'Bellefair',
-      fontSize: '3.5em',
+      fontSize: '56px',
       textTransform: 'uppercase',
+      '@media (max-width: 900px)': {
+        fontSize: '40px',
+      },
+      '@media (max-width: 420px)': {
+        fontSize: '24px',
+      },
     },
     h4: {
       fontFamily: 'Bellefair',
-      fontSize: '2em',
+      fontSize: '32px',
       textTransform: 'uppercase',
+      '@media (max-width: 900px)': {
+        fontSize: '24px',
+      },
+      '@media (max-width: 420px)': {
+        fontSize: '16px',
+      },
     },
     h5: {
       fontFamily: 'Barlow Condensed',
       fontSize: '28px',
       textTransform: 'uppercase',
       letterSpacing: 4.75,
+      '@media (max-width: 900px)': {
+        fontSize: '20px',
+      },
+      '@media (max-width: 420px)': {
+        fontSize: '15px',
+      },
     },
     subtitle1: {
       fontFamily: 'Bellefair',
@@ -51,11 +78,20 @@ const theme = createTheme({
       fontSize: '16px',
       textTransform: 'uppercase',
       letterSpacing: 2.7,
+      '@media (max-width: 420px)': {
+        fontSize: '14px',
+      },
     },
     body1: {
       fontFamily: 'Barlow Condensed',
       fontSize: '18px',
       letterSpacing: 1.5,
+      '@media (max-width: 900px)': {
+        fontSize: '16px',
+      },
+      '@media (max-width: 420px)': {
+        fontSize: '15px',
+      },
     }
   },
   palette: {
