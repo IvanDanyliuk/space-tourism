@@ -4,10 +4,13 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/assets/img/desktop/logo.png'
+import NavMenu from './NavMenu';
+import useWindowDimensions from '../hooks/useWindowDimentions';
+import NavMenuMobile from './NavMenuMobile';
 
 
 const Header = styled.header`
-  padding-left: 60px;
+  padding: 0 0 0 60px;
   position: absolute;
   top: 3vh;
   width: 100%;
@@ -20,101 +23,24 @@ const Header = styled.header`
   z-index: 100;
   
   @media (max-width: 900px) {
+    padding: 2vh 10vw;
     height: 10vh;
   }
 `;
 
 const Logo = styled(Box)``;
 
-const NavMenu = styled.nav`
-  width: 55vw;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 110px 0 120px;
-  background: rgba(111, 113, 123, 0.1);
-  backdrop-filter: blur(10px);
-  box-sizing: border-box;
-
-  @media (max-width: 900px) {
-    padding: 0 20px;
-    width: 60vw;
-  }
-`;
-
-const NavList = styled.ul`
-  margin: 0;
-  padding: 0;
-  display: flex;
-
-  @media (max-width: 900px) {
-    width: 100%;
-    justify-content: space-between;
-  }
-`;
-
-const NavItem = styled.li`
-  margin-right: 50px;
-  cursor: pointer;
-  list-style: none;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-
-  @media (max-width: 900px) {
-    margin-right: 25px;
-  }
-`;
-
-const LinkNum = styled.span`
-  margin-right: 10px;
-  font-weight: 700;
-`;
-
-const LinkName = styled.span``;
-
 
 const Navbar = () => {
+  const { width } = useWindowDimensions();
   return (
     <Header>
       <Logo>
         <Image src={logo} alt='logo' />
       </Logo>
-      <NavMenu>
-        <NavList>
-          <NavItem>
-            <Link href='/'>
-              <Typography variant='inherit'>
-                <LinkNum>00</LinkNum>
-                <LinkName>Home</LinkName>
-              </Typography>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href='/destination'>
-              <Typography variant='inherit'>
-                <LinkNum>01</LinkNum>
-                <LinkName>Destination</LinkName>
-              </Typography>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href='/crew'>
-              <Typography variant='inherit'>
-                <LinkNum>02</LinkNum>
-                <LinkName>Crew</LinkName>
-              </Typography>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href='/technology'>
-              <Typography variant='inherit'>
-                <LinkNum>03</LinkNum>
-                <LinkName>Technology</LinkName>
-              </Typography>
-            </Link>
-          </NavItem>
-        </NavList>
-      </NavMenu>
+      {
+        width! > 420 ? <NavMenu /> : <NavMenuMobile />
+      }
     </Header>
   )
 };
