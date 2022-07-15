@@ -48,9 +48,7 @@ const UpperText = styled(Typography)`
   margin-bottom: 24px;
 `;
 
-const Heading = styled(Typography)`
-
-`;
+const Heading = styled(Typography)``;
 
 const BottomText = styled(Typography)`
   margin-top: 24px;

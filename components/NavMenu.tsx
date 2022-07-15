@@ -32,11 +32,30 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
+  position: relative;
   margin-right: 50px;
+  height: 12vh;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   list-style: none;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ffffff;
+    transition: 0.5s;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
 
   @media (max-width: 900px) {
     margin-right: 25px;

@@ -1,13 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box } from '@mui/material';
-
-
-interface ITabPanel {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-};
+import { ITabPanel } from '../types';
 
 
 const PanelContainer = styled(Box)``;

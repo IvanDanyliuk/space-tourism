@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import theme from '../styles/theme';
 
 
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>

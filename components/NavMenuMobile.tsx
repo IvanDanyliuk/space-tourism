@@ -5,10 +5,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Drawer, Typography } from '@mui/material';
 import Link from 'next/link';
 
-const MenuContainer = styled.nav`
-  
-  
-`;
+
+const MenuContainer = styled.nav``;
 
 const OpenMenuBtn = styled.button`
   padding: 0;

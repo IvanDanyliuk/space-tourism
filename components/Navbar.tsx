@@ -1,7 +1,6 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import styled from 'styled-components';
-import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/assets/img/desktop/logo.png'
 import NavMenu from './NavMenu';
@@ -14,7 +13,6 @@ const Header = styled.header`
   position: absolute;
   top: 3vh;
   width: 100%;
-  height: 12vh;
   display: flex;
   justify-content: space-between;
   align-items: center;

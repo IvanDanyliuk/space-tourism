@@ -5,15 +5,7 @@ import { v4 as uuid } from 'uuid';
 import { Box, Typography } from '@mui/material';
 import SlideImage from './SlideImage';
 import useWindowDimensions from '../hooks/useWindowDimentions';
-
-
-interface ITechnologySlider {
-  info: {
-    title: string;
-    description: string;
-    imageUrl: string;
-  }[],
-};
+import { ITechnologySlider } from '../types';
 
 
 const Slide = styled.div`
@@ -78,10 +70,6 @@ const DotList = styled.ul`
     height: 80px;
     flex-direction: row;
     box-sizing: border-box;
-  }
-
-  @media (max-width: 420px) {
-
   }
 `;
 

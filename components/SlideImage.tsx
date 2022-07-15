@@ -2,12 +2,8 @@ import React from 'react';
 import { Box } from '@mui/material';
 import styled from 'styled-components';
 import NextImage from 'next/image';
+import { ISlideImage } from '../types';
 
-
-interface ISlideImage {
-  url: string;
-  altText: string;
-};
 
 const ImageContainer = styled(Box)`
   position: unset !important;

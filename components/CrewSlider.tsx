@@ -4,16 +4,8 @@ import { Box, Typography } from '@mui/material';
 import Slider from 'react-slick';
 import { v4 as uuid } from 'uuid';
 import SlideImage from './SlideImage';
+import { ICrewSlider } from '../types';
 
-
-interface ICrewSlider {
-  info: {
-    name: string;
-    position: string;
-    information: string;
-    photoUrl: string;
-  }[],
-};
 
 const CustomSlider = styled(Slider)``;
 

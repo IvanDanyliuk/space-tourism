@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ILayout } from '../types';
 import Navbar from './Navbar';
-
-
-interface ILayout {
-  children: React.ReactNode;
-};
 
 
 const Main = styled.main`
