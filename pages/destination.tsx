@@ -31,6 +31,10 @@ const Content = styled(Box)`
 
 const Heading = styled(Typography)`
   padding-top: 7vh;
+
+  @media (max-width: 900px) {
+    padding-top: 5vh;
+  }
 `;
 
 const HeadingNumber = styled.span`
@@ -46,9 +50,24 @@ const TabContainer = styled(Box)`
   width: 100%;
 `;
 
+const ImageContainer = styled(Box)`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 420px) {
+    width: 70%;
+  }
+`;
+
 const TabButtons = styled(Tabs)`
+
   @media (max-width: 900px) {
-    margin: 5vh 0 3vh 0;
+    margin: 3vh 0 1vh 0;
+  }
+
+  @media (max-width: 420px) {
+    margin: 1vh 0 2vh 0;
   }
 `;
 
@@ -74,13 +93,21 @@ const TabDivider = styled(Divider)`
 `;
 
 const TabDetails = styled(Box)`
-  margin-top: 25px;
   width: 100%;
   display: flex;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Distance = styled(Box)`
   width: 50%;
+
+  @media (max-width: 420px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const TravelTime = styled(Box)`
@@ -155,7 +182,9 @@ const Destination: NextPage = () => {
                 value={tab.value}
                 index={tab.index}
               >
-                <Image src={tab.imgUrl} alt={tab.title} width={'445px'} height={'445px'} />
+                <ImageContainer>
+                  <Image src={tab.imgUrl} alt={tab.title} width={'445px'} height={'445px'} />
+                </ImageContainer>
                 <TabText>
                   <TabButtons value={value} onChange={handleTabChange} aria-label='destination-tabs'>
                     <TabButton label='Moon' { ...a11yProps(0) } />

@@ -55,8 +55,6 @@ const SliderSection = styled(Box)`
 `;
 
 
-
-
 const Technology: NextPage = () => {
   const { width } = useWindowDimensions();
   const screenType = width! > 900 ? 'desktop' : 'tablet';

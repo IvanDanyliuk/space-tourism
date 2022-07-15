@@ -60,6 +60,10 @@ const CrewMemberPhoto = styled(Box)`
     min-height: 50vh;
     display: flex !important;
   }
+
+  @media (max-width: 420px) {
+    width: 100% !important;
+  }
 `;
 
 const DotList = styled.ul`
@@ -75,6 +79,11 @@ const DotList = styled.ul`
     left: 40%;
     bottom: 50vh !important;
   }
+
+  @media (max-width: 420px) {
+    left: 25%;
+    width: 50%;
+  } 
 `;
 
 

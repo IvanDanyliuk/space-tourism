@@ -20,8 +20,9 @@ const Content = styled(Box)`
   align-items: center;
 
   @media (max-width: 900px) {
-    padding: 5vh 0;
+    padding: 3vh 0;
     flex-direction: column;
+    justify-content: center;
   }
 `;
 

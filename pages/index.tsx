@@ -35,9 +35,10 @@ const Content = styled(Box)`
 `;
 
 const TextContainer = styled(Box)`
-  width: 70%;
+  width: 40%;
   
   @media (max-width: 900px) {
+    width: 75%;
     text-align: center;
     margin-bottom: 10vh;
   }
@@ -55,11 +56,7 @@ const BottomText = styled(Typography)`
   margin-top: 24px;
 `;
 
-const ButtonContainer = styled(Box)`
-  width: 45%;
-  display: flex;
-  justify-content: center;
-`;
+const ButtonContainer = styled(Box)``;
 
 const ExploreBtn = styled.button`
   cursor: pointer;

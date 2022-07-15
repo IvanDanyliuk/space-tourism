@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import { v4 as uuid } from 'uuid';
 import { Box, Typography } from '@mui/material';
 import SlideImage from './SlideImage';
+import useWindowDimensions from '../hooks/useWindowDimentions';
 
 
 interface ITechnologySlider {
@@ -78,10 +79,15 @@ const DotList = styled.ul`
     flex-direction: row;
     box-sizing: border-box;
   }
+
+  @media (max-width: 420px) {
+
+  }
 `;
 
 
 const TechnologySlider: React.FC<ITechnologySlider> = ({ info }) => {
+  const { width } = useWindowDimensions();
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const settings = {
@@ -100,8 +106,8 @@ const TechnologySlider: React.FC<ITechnologySlider> = ({ info }) => {
       const active = {
         content: '',
         cursor: 'pointer',
-        width: '80px',
-        height: '80px',
+        width: width! > 420 ? '80px' : '40px',
+        height: width! > 420 ? '80px' : '40px',
         border: 'none',
         borderRadius: '50%',
         background: '#ffffff',
@@ -110,8 +116,8 @@ const TechnologySlider: React.FC<ITechnologySlider> = ({ info }) => {
       const inactive = {
         content: '',
         cursor: 'pointer',
-        width: '80px',
-        height: '80px',
+        width: width! > 420 ? '80px' : '40px',
+        height: width! > 420 ? '80px' : '40px',
         border: '2px solid #929292',
         borderRadius: '50%',
         background: 'transparent',
