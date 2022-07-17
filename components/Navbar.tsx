@@ -33,7 +33,7 @@ const Navbar = () => {
   const { width } = useWindowDimensions();
   return (
     <Header>
-      <Logo>
+      <Logo data-testid='logo'>
         <Image src={logo} alt='logo' />
       </Logo>
       {

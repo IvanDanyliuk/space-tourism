@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Box, Typography } from '@mui/material';
 import Slider from 'react-slick';
-import { v4 as uuid } from 'uuid';
 import SlideImage from './SlideImage';
 import { ICrewSlider } from '../types';
 
@@ -127,8 +126,8 @@ const CrewSlider: React.FC<ICrewSlider> = ({ info }) => {
   return (
     <CustomSlider {...settings}>
       {
-        info.map(member => (
-          <Slide key={uuid()}>
+        info.map((member, i) => (
+          <Slide key={`${member.name}_${i}`}>
             <CrewMemberInfo>
               <Typography variant='h4' color='secondary'>{member.position}</Typography>
               <MemberName variant='h3' color='primary'>{member.name}</MemberName>

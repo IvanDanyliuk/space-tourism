@@ -74,7 +74,7 @@ const NavMenu: React.FC = () => {
   return (
     <MenuContainer>
       <NavList>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/'>
               <Typography variant='inherit'>
                 <LinkNum>00</LinkNum>
@@ -82,7 +82,7 @@ const NavMenu: React.FC = () => {
               </Typography>
             </Link>
           </NavItem>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/destination'>
               <Typography variant='inherit'>
                 <LinkNum>01</LinkNum>
@@ -90,7 +90,7 @@ const NavMenu: React.FC = () => {
               </Typography>
             </Link>
           </NavItem>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/crew'>
               <Typography variant='inherit'>
                 <LinkNum>02</LinkNum>
@@ -98,7 +98,7 @@ const NavMenu: React.FC = () => {
               </Typography>
             </Link>
           </NavItem>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/technology'>
               <Typography variant='inherit'>
                 <LinkNum>03</LinkNum>

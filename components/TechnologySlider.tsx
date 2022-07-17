@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import { v4 as uuid } from 'uuid';
 import { Box, Typography } from '@mui/material';
 import SlideImage from './SlideImage';
 import useWindowDimensions from '../hooks/useWindowDimentions';
@@ -128,8 +127,8 @@ const TechnologySlider: React.FC<ITechnologySlider> = ({ info }) => {
   return (
     <Slider {...settings}>
       {
-        info.map(item => (
-          <Slide key={uuid()}>
+        info.map((item, i) => (
+          <Slide key={`${item.title}_${i}`}>
             <TextSection>
               <Typography variant='caption' color='secondary'>The Terminology</Typography>
               <SlideTitle variant='h3' color='primary'>{item.title}</SlideTitle>

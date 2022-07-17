@@ -87,7 +87,7 @@ const NavMenuMobile: React.FC = () => {
           <CloseIcon fontSize='inherit' sx={{ color: '#ffffff' }} />
         </CloseMenuBtn>
         <NavList>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/'>
               <Typography variant='caption'>
                 <LinkNum>00</LinkNum>
@@ -95,7 +95,7 @@ const NavMenuMobile: React.FC = () => {
               </Typography>
             </Link>
           </NavItem>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/destination'>
               <Typography variant='caption'>
                 <LinkNum>01</LinkNum>
@@ -103,7 +103,7 @@ const NavMenuMobile: React.FC = () => {
               </Typography>
             </Link>
           </NavItem>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/crew'>
               <Typography variant='caption'>
                 <LinkNum>02</LinkNum>
@@ -111,7 +111,7 @@ const NavMenuMobile: React.FC = () => {
               </Typography>
             </Link>
           </NavItem>
-          <NavItem>
+          <NavItem data-testid='navlink'>
             <Link href='/technology'>
               <Typography variant='caption'>
                 <LinkNum>03</LinkNum>
