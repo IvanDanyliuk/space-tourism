@@ -134,7 +134,7 @@ const TechnologySlider: React.FC<ITechnologySlider> = ({ info }) => {
               <SlideTitle variant='h3' color='primary'>{item.title}</SlideTitle>
               <Typography variant='body1' color='secondary'>{item.description}</Typography>
             </TextSection>
-            <ImageSection>
+            <ImageSection data-testid='technologyImage'>
               <SlideImage url={item.imageUrl} altText={item.title} />
             </ImageSection>
           </Slide>
